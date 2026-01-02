@@ -12,6 +12,7 @@ const SYSTEM_PROMPT = `You are a helpful AI assistant for Just Add Color Paintin
 Company Info:
 - Phone: (860) 936-6338
 - Services: Interior Painting, Exterior Painting, Commercial Painting, Cabinet Refinishing
+- Service Areas: All of Connecticut (CT) and parts of Massachusetts (MA) - particularly the areas near the CT border
 - We offer FREE quotes and color consultations
 - Licensed, insured, and EPA Lead-Safe Certified
 - We use premium paints from brands like Benjamin Moore and Sherwin-Williams
@@ -99,8 +100,8 @@ function getSimpleResponse(message: string): string {
     return "We offer free color consultations as part of our service! Our team can help you choose the perfect colors for your space. We use premium paints from Benjamin Moore and Sherwin-Williams for lasting, beautiful results."
   }
 
-  if (lowerMessage.includes('area') || lowerMessage.includes('location') || lowerMessage.includes('where')) {
-    return "We serve the Greater Metro Area and surrounding communities. Contact us at (860) 936-6338 to confirm service availability in your specific location!"
+  if (lowerMessage.includes('area') || lowerMessage.includes('location') || lowerMessage.includes('where') || lowerMessage.includes('ct') || lowerMessage.includes('connecticut') || lowerMessage.includes('mass') || lowerMessage.includes('ma')) {
+    return "Yes! We proudly serve all of Connecticut and parts of Massachusetts (especially areas near the CT border). Contact us at (860) 936-6338 to confirm service availability in your specific location!"
   }
 
   if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
